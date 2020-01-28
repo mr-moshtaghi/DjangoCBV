@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from django.views import View
 
 
-def home(request):
-	return render(request, 'first/home.html')
+class Home(View):
+	def get(self, request, *args, **kwargs):
+		return render(request, 'first/home.html', {'name':'Mongard'})
