@@ -1,12 +1,12 @@
-from django.shortcuts import render
-from django.views.generic.base import TemplateView
 from .models import Todo
+from django.views.generic.list import ListView
 
 
-class Home(TemplateView):
+class Home(ListView): # first/todo_list.html
 	template_name = 'first/home.html'
+	context_object_name = 'todos'
+	ordering = ['-created']
 
-	def get_context_data(self, **kwargs):
-		context = super().get_context_data(**kwargs)
-		context['todos'] = Todo.objects.all()
-		return context
+	def get_queryset(self):
+		return Todo.objects.all()
+
