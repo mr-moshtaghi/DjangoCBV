@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
     <h3>Home</h3><hr/>
     {% for todo in todos %}
-        {{ todo.title }}
+        <a href="{% url 'first:detail_todo' todo.slug %}">{{ todo.title }}</a>
     {% endfor %}
 
 {% endblock %}
