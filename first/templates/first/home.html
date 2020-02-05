@@ -4,7 +4,7 @@
 
     <h3>Home</h3><hr/>
     {% for todo in todos %}
-        <a href="{% url 'first:detail_todo' todo.slug %}">{{ todo.title }}</a>
+        <a href="{% url 'first:detail_todo' todo.slug %}">{{ todo.title }}</a><br/><br/>
     {% endfor %}
 
 {% endblock %}
