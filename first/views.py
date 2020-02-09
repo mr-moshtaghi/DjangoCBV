@@ -1,11 +1,10 @@
 from .models import Todo
 from django.views.generic import ListView # __init__.py   __all__
 from django.views.generic import DetailView
-from django.views.generic import FormView
-from .forms import TodoCreateForm
 from django.urls import reverse_lazy
 from django.utils.text import slugify
 from django.contrib import messages
+from django.views.generic import CreateView
 
 
 
@@ -28,17 +27,15 @@ class DetailTodo(DetailView): # first/todo_detail.html  object
 		else:
 			return Todo.objects.none()
 
-
-class TodoCreate(FormView):
-	form_class = TodoCreateForm
+class TodoCreate(CreateView):
+	model = Todo
+	fields = ('title',)
 	template_name = 'first/todo_create.html'
 	success_url = reverse_lazy('first:home')
 
 	def form_valid(self, form):
-		self.create_todo(form.cleaned_data)
-		return super().form_valid(form)
-
-	def create_todo(self, data):
-		todo = Todo(title=data['title'], slug=slugify(data['title']))
+		todo = form.save(commit=False)
+		todo.slug = slugify(form.cleaned_data['title'])
 		todo.save()
 		messages.success(self.request, 'your todo added', 'success')
+		return super().form_valid(form)
