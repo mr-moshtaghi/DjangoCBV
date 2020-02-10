@@ -1,11 +1,8 @@
 from .models import Todo
-from django.views.generic import ListView # __init__.py   __all__
-from django.views.generic import DetailView
+from django.views.generic import ListView, DetailView, CreateView, DeleteView
 from django.urls import reverse_lazy
 from django.utils.text import slugify
 from django.contrib import messages
-from django.views.generic import CreateView
-
 
 
 class Home(ListView): # first/todo_list.html
@@ -39,3 +36,8 @@ class TodoCreate(CreateView):
 		todo.save()
 		messages.success(self.request, 'your todo added', 'success')
 		return super().form_valid(form)
+
+class DeleteTodo(DeleteView):
+	model = Todo
+	template_name = 'first/todo_delete.html'
+	success_url = reverse_lazy('first:home')
