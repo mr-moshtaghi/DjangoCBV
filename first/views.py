@@ -1,5 +1,5 @@
 from .models import Todo
-from django.views.generic import ListView, DetailView, CreateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
 from django.urls import reverse_lazy
 from django.utils.text import slugify
 from django.contrib import messages
@@ -40,4 +40,10 @@ class TodoCreate(CreateView):
 class DeleteTodo(DeleteView):
 	model = Todo
 	template_name = 'first/todo_delete.html'
+	success_url = reverse_lazy('first:home')
+
+class UpdateTodo(UpdateView):
+	model = Todo
+	fields = ('title',)
+	template_name = 'first/update_todo.html'
 	success_url = reverse_lazy('first:home')
