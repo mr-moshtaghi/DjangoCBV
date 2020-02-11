@@ -102,6 +102,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 LOGIN_REDIRECT_URL = 'first:home'
+LOGOUT_REDIRECT_URL = 'first:home'
 
 
 # Internationalization
