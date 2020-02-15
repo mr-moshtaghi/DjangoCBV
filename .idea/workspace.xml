@@ -5,8 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/A/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/A/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/inc/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/inc/navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -74,9 +74,9 @@
       <screen x="0" y="27" width="1280" height="949" />
     </state>
     <state x="129" y="136" width="1022" height="737" key="SettingsEditor/0.27.1280.949@0.27.1280.949" timestamp="1579961073431" />
-    <state x="303" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1581342849572">
+    <state x="303" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1581589452395">
       <screen x="0" y="27" width="1280" height="949" />
     </state>
-    <state x="303" y="233" width="672" height="678" key="search.everywhere.popup/0.27.1280.949@0.27.1280.949" timestamp="1581342849572" />
+    <state x="303" y="233" width="672" height="678" key="search.everywhere.popup/0.27.1280.949@0.27.1280.949" timestamp="1581589452395" />
   </component>
 </project>
