@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2e99e073-c4e0-4c3c-ad6b-e27af40b3aa6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/accounts/password_reset_email.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/accounts/password_reset_email.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/first/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/first/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +65,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="323" y="229" width="624" height="551" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1581875125527">
+      <screen x="0" y="27" width="1280" height="949" />
+    </state>
+    <state x="323" y="229" width="624" height="551" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.27.1280.949@0.27.1280.949" timestamp="1581875125527" />
     <state x="423" y="259" width="424" height="491" key="FileChooserDialogImpl" timestamp="1581341532076">
       <screen x="0" y="27" width="1280" height="949" />
     </state>
@@ -74,9 +77,9 @@
       <screen x="0" y="27" width="1280" height="949" />
     </state>
     <state x="129" y="136" width="1022" height="737" key="SettingsEditor/0.27.1280.949@0.27.1280.949" timestamp="1579961073431" />
-    <state x="303" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1581589452395">
+    <state x="303" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1581922485263">
       <screen x="0" y="27" width="1280" height="949" />
     </state>
-    <state x="303" y="233" width="672" height="678" key="search.everywhere.popup/0.27.1280.949@0.27.1280.949" timestamp="1581589452395" />
+    <state x="303" y="233" width="672" height="678" key="search.everywhere.popup/0.27.1280.949@0.27.1280.949" timestamp="1581922485263" />
   </component>
 </project>
