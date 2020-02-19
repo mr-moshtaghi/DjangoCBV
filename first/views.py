@@ -4,6 +4,7 @@ from django.urls import reverse_lazy
 from django.utils.text import slugify
 from django.contrib import messages
 from django.views.generic.dates import MonthArchiveView
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class Home(ListView): # first/todo_list.html
@@ -15,15 +16,11 @@ class Home(ListView): # first/todo_list.html
 		return Todo.objects.all()
 
 
-class DetailTodo(DetailView): # first/todo_detail.html  object
+class DetailTodo(LoginRequiredMixin, DetailView): # first/todo_detail.html  object
+	model = Todo
 	slug_field = 'slug'
 	slug_url_kwarg = 'myslug'
 
-	def get_queryset(self, **kwargs):
-		if self.request.user.is_authenticated:
-			return Todo.objects.filter(slug=self.kwargs['myslug'])
-		else:
-			return Todo.objects.none()
 
 class TodoCreate(CreateView):
 	model = Todo
