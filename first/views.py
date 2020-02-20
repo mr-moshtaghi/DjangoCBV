@@ -1,6 +1,8 @@
-from .models import Todo
+from .models import Todo, Comment
+from .forms import TodoCommentForm
 from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
-from django.urls import reverse_lazy
+from django.views.generic.edit import FormMixin
+from django.urls import reverse_lazy, reverse
 from django.utils.text import slugify
 from django.contrib import messages
 from django.views.generic.dates import MonthArchiveView
@@ -16,10 +18,23 @@ class Home(ListView): # first/todo_list.html
 		return Todo.objects.all()
 
 
-class DetailTodo(LoginRequiredMixin, DetailView): # first/todo_detail.html  object
+class DetailTodo(LoginRequiredMixin, FormMixin, DetailView): # first/todo_detail.html  object
 	model = Todo
+	form_class = TodoCommentForm
 	slug_field = 'slug'
 	slug_url_kwarg = 'myslug'
+
+	def get_success_url(self):
+		return reverse('first:detail_todo', kwargs={'myslug':self.object.slug})
+
+	def post(self, request, *args, **kwargs):
+		self.object = self.get_object()
+		form = self.get_form()
+		if form.is_valid():
+			comment = Comment(todo=self.object, name=form.cleaned_data['name'], body=form.cleaned_data['body'])
+			comment.save()
+		return super().form_valid(form)
+
 
 
 class TodoCreate(CreateView):

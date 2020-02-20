@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2e99e073-c4e0-4c3c-ad6b-e27af40b3aa6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/first/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/first/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first/templates/first/todo_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/first/templates/first/todo_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/first/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/first/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -75,6 +79,10 @@
       <screen x="0" y="27" width="1280" height="949" />
     </state>
     <state x="129" y="136" width="1022" height="737" key="SettingsEditor/0.27.1280.949@0.27.1280.949" timestamp="1579961073431" />
+    <state x="408" y="421" width="454" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582101251691">
+      <screen x="0" y="27" width="1280" height="949" />
+    </state>
+    <state x="408" y="421" width="454" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1280.949@0.27.1280.949" timestamp="1582101251691" />
     <state x="303" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1581922485263">
       <screen x="0" y="27" width="1280" height="949" />
     </state>

@@ -2,5 +2,17 @@
 
 {% block content %}
     <p>{{ object.title }}</p>
-    <small>{{ object.created }}</small>
+    <small>{{ object.created }}</small><br/><br/><hr/>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Send" class="btn btn-primary">
+    </form><br/><br/><hr/>
+
+    {% for cmt in object.tcomments.all %}
+        <p>{{ cmt.name }}</p>
+        <p>{{ cmt.body }}</p><hr/>
+    {% endfor %}
+
 {% endblock %}
