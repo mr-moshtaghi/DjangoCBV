@@ -11,6 +11,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 class Home(ListView): # first/todo_list.html
 	template_name = 'first/home.html'
+	# queryset = Todo.objects.all()
 	context_object_name = 'todos' # object_list
 	ordering = ['-created']
 
