@@ -1,6 +1,6 @@
 from .models import Todo, Comment
 from .forms import TodoCommentForm
-from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
+from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView, FormView
 from django.views.generic.edit import FormMixin
 from django.urls import reverse_lazy, reverse
 from django.utils.text import slugify
@@ -22,8 +22,14 @@ class Home(ListView): # first/todo_list.html
 class DetailTodo(LoginRequiredMixin, FormMixin, DetailView): # first/todo_detail.html  object
 	model = Todo
 	form_class = TodoCommentForm
-	slug_field = 'slug'
-	slug_url_kwarg = 'myslug'
+	slug_field = 'slug'  # in model
+	slug_url_kwarg = 'myslug'  # in path
+
+	# def get_queryset(self, **kwargs):
+	# 	if self.request.user.is_authenticated:
+	# 		return Todo.objects.filter(slug=self.kwargs['myslug'])
+	# 	else:
+	# 		return Todo.objects.none()
 
 	def get_success_url(self):
 		return reverse('first:detail_todo', kwargs={'myslug':self.object.slug})
@@ -36,6 +42,20 @@ class DetailTodo(LoginRequiredMixin, FormMixin, DetailView): # first/todo_detail
 			comment.save()
 		return super().form_valid(form)
 
+
+# class TodoCreate(FormView):
+# 	form_class = TodoCreateForm
+# 	template_name = 'first/todo_create.html'
+# 	success_url = reverse_lazy('first:home')
+#
+# 	def form_valid(self, form):
+# 		self.create_todo(form.cleaned_data)
+# 		return super().form_valid(form)
+#
+# 	def create_todo(self, data):
+# 		todo = Todo(title=data['title'], slug=slugify(data['title']))
+# 		todo.save()
+# 		messages.success(self.request, 'your todo add', 'success')
 
 
 class TodoCreate(CreateView):
